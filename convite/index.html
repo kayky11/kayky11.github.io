@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aniversario do kalique</title>
+</head>
+<body>
+    
+</body>
+</html>
+<html>
+<head>
+</head>
+<body>
+    <div class="convite" id="convite">
+        <h1>Convite de Aniversário</h1>
+        <p>Olá! Você está convidado para a minha festa de aniversário. Aceita o convite?</p>
+        <button id="aceitarConvite">Sim</button>
+        <button id="negarConvite">Não</button>
+    </div>
+    <div id="agradecimento" class="oculto">
+        <h1>OBRIGADO POR ACEITAR MEU CONVITE !</h1>
+        <p>VOCE SERA REDIRECIONADO PARA MEU ZAP EM BREVE, CONFIRME SUA PRESENÇA PFV.</p>
+        <h2>A "FESTINHA" SERA NA CHACARA NA FERRAREZI, APARTIR DAS 14:0, SE NÃO SOUBER ONDE É, ME MANDE UMA MENSAGEM QUE PASSO A LOCALIZAÇÃO</h2>
+        <h2>TE ESPERO LA ⌚</h2>
+    </div>
+    <div id="tristeza" class="oculto">
+        <h1>Que pena que você não pode comparecer!</h1>
+        <p>Espero vê-lo em outra ocasião.</p>
+    </div>
+</body>
+</html>
+
+<style>
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background-color: #FF5733;
+    }
+    
+    .convite {
+        background: #fff;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 80%;
+    }
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    
+    button#negarConvite {
+        background-color: #FF5733;
+    }
+    
+    .oculto {
+        display: none;
+    }
+</style>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const aceitarConviteButton = document.getElementById("aceitarConvite");
+        const negarConviteButton = document.getElementById("negarConvite");
+        const agradecimentoDiv = document.getElementById("agradecimento");
+        const tristezaDiv = document.getElementById("tristeza");
+    
+        aceitarConviteButton.addEventListener("click", function () {
+            agradecimentoDiv.style.display = "block";
+            tristezaDiv.style.display = "none";
+            aceitarConviteButton.style.display = "none";
+            negarConviteButton.style.display = "none";
+    
+            // Redireciona para o WhatsApp após um breve agradecimento
+            setTimeout(function () {
+                window.location.href = "https://api.whatsapp.com/send?phone=43991574284&text=Oi%2C%20aceitei%20seu%20convite%20de%20anivers%C3%A1rio!";
+            }, 500000); // Redireciona após 3 segundos (3000 milissegundos)
+        });
+    
+        negarConviteButton.addEventListener("click", function () {
+            tristezaDiv.style.display = "block";
+            agradecimentoDiv.style.display = "none";
+            aceitarConviteButton.style.display = "none";
+            negarConviteButton.style.display = "none";
+        });
+    });document.addEventListener("DOMContentLoaded", function () {
+        const aceitarConviteButton = document.getElementById("aceitarConvite");
+        const negarConviteButton = document.getElementById("negarConvite");
+        const agradecimentoDiv = document.getElementById("agradecimento");
+        const tristezaDiv = document.getElementById("tristeza");
+    
+        aceitarConviteButton.addEventListener("click", function () {
+            agradecimentoDiv.style.display = "block";
+            tristezaDiv.style.display = "none";
+            aceitarConviteButton.style.display = "none";
+            negarConviteButton.style.display = "none";
+    
+            // Redireciona para o WhatsApp após um breve agradecimento
+            setTimeout(function () {
+                window.location.href = "https://api.whatsapp.com/send?phone=43991574284&text=Oi%2C%20aceitei%20seu%20convite%20de%20anivers%C3%A1rio!";
+            }, 3000); // Redireciona após 3 segundos (3000 milissegundos)
+        });
+    
+        negarConviteButton.addEventListener("click", function () {
+            tristezaDiv.style.display = "block";
+            agradecimentoDiv.style.display = "none";
+            aceitarConviteButton.style.display = "none";
+            negarConviteButton.style.display = "none";
+        });
+    });
+
+</script>
